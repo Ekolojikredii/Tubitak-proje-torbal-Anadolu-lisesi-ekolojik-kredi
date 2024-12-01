@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+            <img src="logo.png" alt="Ekolojik Kredi Logo" class="logo">
+            <h1>Ekolojik Kredi</h1>
+            <div class="menu" id="menuContent">
+                <a href="#hazirlayanlar" onclick="showSection('hazirlayanlar')">Hazırlayanlar</a>
+                <a href="#ekolojikKrediNedir" onclick="showSection('ekolojikKrediNedir')">Ekolojik Kredi Nedir?</a>
+            </div>
+        </div>
+        <div class="right">
+            <button onclick="showSection('kayit')" class="oval-btn">Kayıt Ol</button>
+            <button id="veriGoruntulemeButon" onclick="showVeriGoruntuleme()" class="oval-btn">Veri Görme</button>
+            <button onclick="showSection('veriGirisi')" class="oval-btn">Veri Girişi</button>
+        </div>
+    </div>
+
+    <div id="hazirlayanlar" class="section">
+        <h2>Hazırlayanlar</h2>
+        <p>Danışman: Osman Onuk</p>
+        <p>Öğrenciler: Muhammedcan Arslanparçası, Yağız Efe Yılmaz, Bilal Yiğit Tezcan</p>
+    </div>
+
+    <div id="ekolojikKrediNedir" class="section">
+        <h2>Ekolojik Kredi Nedir?</h2>
+        <p>Ekolojik Kredi Projesi, çevre bilincini artırmak ve okullarda geri dönüşüm kültürünü geliştirmek amacıyla oluşturulmuştur. Öğrenciler, atıkları türlerine göre ayrıştırarak puan toplar ve ödüller kazanır. Proje, Türkiye'nin sıfır atık hedeflerine ve doğal kaynakların korunmasına katkı sağlamayı amaçlar.</p>
+    </div>
+
+    <div id="kayit" class="section">
+        <h2>Kayıt Ol</h2>
+        <form id="kayitForm">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="il" placeholder="İl" required>
+            <input type="text" name="ilce" placeholder="İlçe" required>
+            <input type="text" name="okul" placeholder="Okul" required>
+            <input type="text" name="okulNumarasi" placeholder="Okul Numarası" required>
+            <input type="text" name="isim" placeholder="İsim" required>
+            <button type="submit">Kayıt Ol</button>
+        </form>
+    </div>
+
+    <div id="veriGoruntuleme" class="section">
+        <h2>Veri Görme</h2>
+        <form id="veriGoruntulemeForm">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="okulNumarasi" placeholder="Okul Numarası" required>
+            <button type="submit">Verileri Gör</button>
+        </form>
+        <div class="left-info" style="display: none;">
+            <p>İsim: <span id="veriGoruntulemeIsim"></span></p>
+            <p>Puan: <span id="veriGoruntulemePuan"></span></p>
+        </div>
+        <div class="right-info" style="display: none;">
+            <h3>Geçmiş Teslimler</h3>
+            <ul id="gecmisTeslimler"></ul>
+        </div>
+    </div>
+
+    <div id="veriGirisi" class="section">
+        <h2>Komite Girişi</h2>
+        <form id="komiteGirisiForm">
+            <input type="text" name="komiteAdi" placeholder="Komite Adı" required>
+            <input type="password" name="komiteSifresi" placeholder="Komite Şifresi" required>
+            <button type="submit">Giriş</button>
+        </form>
+    </div>
+
+    <div id="veriGirisiFormContainer" class="section" style="display: none;">
+        <h2>Veri Girişi</h2>
+        <form id="veriGirisiForm">
+            <input type="text" name="okulIsmi" placeholder="Okul İsmi" required>
+            <input type="text" name="okulNumarasi" placeholder="Okul Numarası" required>
+            <select name="atikTuru" required>
+                <option value="kağıt">Kağıt</option>
+                <option value="plastik">Plastik</option>
+                <option value="cam">Cam</option>
+                <option value="metal">Metal</option>
+                <option value="elektronik atıklar">Elektronik Atıklar</option>
+            </select>
+            <input type="number" name="atikKutlesi" placeholder="Atık Kütlesi (kg)" required>
+            <input type="text" name="teslimEden" placeholder="Teslim Eden" required>
+            <button type="submit">Veri Gir</button>
+        </form>
+    </div>
+</body>
+</html>
