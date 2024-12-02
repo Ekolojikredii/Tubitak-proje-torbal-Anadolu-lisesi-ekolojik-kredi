@@ -11,114 +11,30 @@
     <div class="container">
         <div class="left">
             <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
-
-  <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-    <rect width="400" height="400" fill="#e6ffe6"/>
-    <circle cx="200" cy="200" r="180" fill="#b3ff99"/>
-    <circle cx="200" cy="200" r="160" fill="#d9ffb3"/>
-    <text x="200" y="120" text-anchor="middle" font-size="40" fill="#006600" font-family="Arial">Ekolojik</text>
-    <text x="200" y="180" text-anchor="middle" font-size="40" fill="#006600" font-family="Arial">Kredi</text>
-    <text x="200" y="260" text-anchor="middle" font-size="32" fill="#004d00" font-family="Arial">♻️</text>
-</svg>
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoş Geldiniz</title>
-</head>
-<body>
-    <div style="position: absolute; top: 150px; right: -555px; color: darkblue; font-size: 48px; font-weight: bold;">
-        
+            <img src="logo.png" alt="Ekolojik Kredi Logo" class="logo">
+            <h1>Ekolojik Kredi</h1>
+            <div class="menu" id="menuContent">
+                <a href="#hazirlayanlar" onclick="showSection('hazirlayanlar')">Hazırlayanlar</a>
+                <a href="#ekolojikKrediNedir" onclick="showSection('ekolojikKrediNedir')">Ekolojik Kredi Nedir?</a>
+            </div>
+        </div>
+        <div class="right">
+            <button onclick="showSection('kayit')" class="oval-btn">Kayıt Ol</button>
+            <button id="veriGoruntulemeButon" onclick="showVeriGoruntuleme()" class="oval-btn">Veri Görme</button>
+            <button onclick="showSection('veriGirisi')" class="oval-btn">Veri Girişi</button>
+        </div>
     </div>
-</body>
-</html>
-                                                        
 
-	
-<div class="project-title">
-  <h1>TORBALI ANADOLU LİSESİ TÜBİTAK PROJESİ</h1>
-</div>
+    <div id="hazirlayanlar" class="section">
+        <h2>Hazırlayanlar</h2>
+        <p>Danışman: Osman Onuk</p>
+        <p>Öğrenciler: Muhammedcan Arslanparçası, Yağız Efe Yılmaz, Bilal Yiğit Tezcan</p>
+    </div>
 
-
-            
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ekolojik Kredi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .menu {
-      background-color: #2E8B57;
-      padding: 15px;
-      color: white;
-      text-align: center;
-      cursor: pointer;
-    }
-    .menu-content {
-      display: none;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    .menu-content a {
-      color: #2E8B57;
-      text-decoration: none;
-    }
-    .counter {
-      font-size: 24px;
-      font-weight: bold;
-      color: #2E8B57;
-      margin: 20px 0;
-    }
-    .btn {
-      padding: 10px 20px;
-      background-color: #2E8B57;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-  </style>
-  <script>
-    let puan = 0;
-    function toggleMenu() {
-      var menuContent = document.getElementById('menu-content');
-      menuContent.style.display = menuContent.style.display === 'none' ? 'block' : 'none';
-    }
-    function arttirPuan() {
-      puan += 10;
-      document.getElementById('puan-sayaci').innerText = puan + " Puan";
-    }
-  </script>
-</head>
-<body>
-  <div class="menu" onclick="toggleMenu()">Menü</div>
-  <div id="menu-content" class="menu-content">
-    <h2>Geri Dönüşüm Nedir?</h2>
-    <p>
-      Geri dönüşüm, kullanılmış veya atık malzemelerin tekrar işlenerek yeni ürünler haline getirilmesi sürecidir. Bu süreç, çevre kirliliğini azaltırken doğal kaynakları korumaya yardımcı olur.
-    </p>
-    <h2>Bize Ulaşın</h2>
-    <p>Email: <a href="mailto:ekolojikkreditubitak@gmail.com">ekolojikkreditubitak@gmail.com</a></p>
-    <h2>Daha Fazla Bilgi</h2>
-    <p>Daha fazla bilgi için <a href="https://sifiratik.gov.tr/" target="_blank">Sıfır Atık Resmi Web Sitesi</a>ni ziyaret edebilirsiniz.</p>
-    <h2>Hazırlayanlar</h2>
-    <p>
-      Danışman: Osman Onuk<br>
-      Öğrenciler: Muhammedcan Arslanparçası, Bilal Yiğit Tezcan, Yağız Efe Yılmaz
-    </p>
-    <h2>Puan Sayacı</h2>
-    <div class="counter" id="puan-sayaci">0 Puan</div>
-    <button class="btn" onclick="arttirPuan()">Puanı Artır</button>
-  </div>
-</body>
-</html>
+    <div id="ekolojikKrediNedir" class="section">
+        <h2>Ekolojik Kredi Nedir?</h2>
+        <p>Ekolojik Kredi Projesi, çevre bilincini artırmak ve okullarda geri dönüşüm kültürünü geliştirmek amacıyla oluşturulmuştur. Öğrenciler, atıkları türlerine göre ayrıştırarak puan toplar ve ödüller kazanır. Proje, Türkiye'nin sıfır atık hedeflerine ve doğal kaynakların korunmasına katkı sağlamayı amaçlar.</p>
+    </div>
 
     <div id="kayit" class="section">
         <h2>Kayıt Ol</h2>
